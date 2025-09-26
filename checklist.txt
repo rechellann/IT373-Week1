@@ -1,0 +1,50 @@
+# ENVIRONMENT CHECKLIST - IT373 Week 1 Django Basic Setup
+
+STEP 1: Project Folder Creation
+- Created folder: IT373-Week1
+- Navigated into folder
+
+STEP 2: Python & Tooling Verification
+- Verified Python version: Python 3.12.11
+
+STEP 3: Virtual Environment Setup
+- Created virtual environment: python -m venv .venv
+- Activated virtual environment
+
+STEP 4: Django Installation
+- Installed Django: pip install django
+- Verified Django version: Django 4.2.6
+
+STEP 5: Django Project Creation
+- Created Django project: django-admin startproject config .
+- Project files created successfully
+
+STEP 6: Development Server Test
+- Started server: python manage.py runserver
+- Django welcome page displayed at http://127.0.0.1:8000/
+
+STEP 7: Django App Creation
+- Created app: core
+- Registered app in settings.py
+
+STEP 8: Template Structure Setup
+- Created templates folder: core/templates
+- Added base.html for inheritance
+
+STEP 9: Views Implementation
+- Created views: home, about, hello
+
+STEP 10: Template Creation
+- Created home.html, about.html
+- Used template inheritance from base.html
+
+STEP 11: URL Routing Configuration
+- Configured core/urls.py with paths for home, about, hello
+
+STEP 12: Git Version Control Setup
+- Initialized Git repo
+- Committed all files
+
+STEP 13: GitHub Repository Connection
+- Linked to GitHub: Django-Playground
+- Pushed project to remote repository
