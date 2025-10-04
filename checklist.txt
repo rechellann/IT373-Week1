@@ -1,50 +1,75 @@
-# ENVIRONMENT CHECKLIST - IT373 Week 1 Django Basic Setup
+ENVIRONMENT CHECKLIST - IT373 Week 1 Django Basic Setup
 
-STEP 1: Project Folder Creation
-- Created folder: IT373-Week1
-- Navigated into folder
+---
 
-STEP 2: Python & Tooling Verification
-- Verified Python version: Python 3.12.11
+ STEP 1: PROJECT FOLDER CREATION
+- [x] Created project folder using: `mkdir "IT373-Week1"`
+- [x] Navigated to folder using: `cd "IT373-Week1"`
+- [x] Folder structure initialized and ready
 
-STEP 3: Virtual Environment Setup
-- Created virtual environment: python -m venv .venv
-- Activated virtual environment
+STEP 2: PYTHON & TOOLING VERIFICATION
+- [x] Verified Python installation: `python --version` → Python 3.12.11 confirmed ✅
 
-STEP 4: Django Installation
-- Installed Django: pip install django
-- Verified Django version: Django 4.2.6
+STEP 3: VIRTUAL ENVIRONMENT SETUP
+- [x] Created virtual environment: `python -m venv .venv`
+- [x] Activated virtual environment: `source .venv/bin/activate`
 
-STEP 5: Django Project Creation
-- Created Django project: django-admin startproject config .
-- Project files created successfully
+STEP 4: DJANGO INSTALLATION
+- [x] Installed Django in virtual environment: `pip install django`
+- [x] Verified Django installation: `python -m django --version`
 
-STEP 6: Development Server Test
-- Started server: python manage.py runserver
-- Django welcome page displayed at http://127.0.0.1:8000/
+STEP 5: DJANGO PROJECT CREATION
+- [x] Created Django project: `django-admin startproject config .`
+- [x] Project created successfully in current directory
 
-STEP 7: Django App Creation
-- Created app: core
-- Registered app in settings.py
+STEP 6: DEVELOPMENT SERVER TEST
+- [x] Started development server: `python manage.py runserver`
+- [x] Opened browser to: `http://127.0.0.1:8000/`
+- [x] Django welcome page displayed successfully
+- [x] Server running without errors on port 8000
 
-STEP 8: Template Structure Setup
-- Created templates folder: core/templates
-- Added base.html for inheritance
+STEP 7: DJANGO APP CREATION
+- [x] Created 'core' app: `python manage.py startapp core`
+- [x] Added 'core' to INSTALLED_APPS in `config/settings.py`
 
-STEP 9: Views Implementation
-- Created views: home, about, hello
+STEP 8: TEMPLATE STRUCTURE SETUP
+- [x] Created templates directory: `mkdir core/templates`
+- [x] Created `base.html` template
+- [x] Template folder structure ready for template inheritance
 
-STEP 10: Template Creation
-- Created home.html, about.html
-- Used template inheritance from base.html
+STEP 9: VIEWS IMPLEMENTATION
+- [x] Created views in `core/views.py`:
+  - `home(request)` view with context data
+  - `about(request)` view for about page
+  - `hello(request)` view with course and week variables
 
-STEP 11: URL Routing Configuration
-- Configured core/urls.py with paths for home, about, hello
+STEP 10: TEMPLATE CREATION
+- [x] Created `base.html` with:
+  - HTML5 structure
+  - `{% block title %}` and `{% block content %}` template blocks
+- [x] Created `home.html` extending `base.html` with welcome content
+- [x] Created `about.html` with student information:
+  - Name: **Ramcez James Fat**
+  - Student ID: **2023-11485**
+- [x] All templates properly extending base template
 
-STEP 12: Git Version Control Setup
-- Initialized Git repo
-- Committed all files
+STEP 11: URL ROUTING CONFIGURATION
+- [x] Created `core/urls.py` with URL patterns:
+  - `path('', views.home, name='home')`
+  - `path('about/', views.about, name='about')`
+  - `path('hello/', views.hello, name='hello')`
 
-STEP 13: GitHub Repository Connection
-- Linked to GitHub: Django-Playground
-- Pushed project to remote repository
+STEP 12: GIT VERSION CONTROL SETUP
+- [x] Initialized Git repository: `git init`
+- [x] Added all files: `git add .`
+- [x] Created initial commit: `git commit -m "Finished Exercise 1"`
+- [x] Git repository successfully initialized
+
+STEP 13: GITHUB REPOSITORY CONNECTION
+- [x] Created GitHub repository: **Django-Playground**
+- [x] Added remote origin:  
+  `git remote add origin https://github.com/ramisys/Django-Playground.git`
+- [x] Pushed to GitHub: `git push origin master`
+- [x] Repository successfully synced with GitHub
+ENVIRONMENT CHECKLIST - IT373 Week 1 Django Basic Setup
+
