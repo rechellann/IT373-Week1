@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}{{ announcement.title }}{% endblock %}
+
+{% block content %}
+<h2>{{ announcement.title }}</h2>
+<p><small>Posted on {{ announcement.created_at|date:"M d, Y" }}</small></p>
+
+<div id="content-preview">
+    {{ announcement.content|slice:":200" }}{% if announcement.content|length > 200 %}...{% endif %}
+</div>
+<div id="content-full" style="display:none;">
+    {{ announcement.content }}
+</div>
+
+<button id="toggle-btn">Read more</button>
+
+<script>
+document.getElementById('toggle-btn').addEventListener('click', function() {
+    var preview = document.getElementById('content-preview');
+    var full = document.getElementById('content-full');
+    if (full.style.display === 'none') {
+        full.style.display = 'block';
+        preview.style.display = 'none';
+        this.textContent = 'Show less';
+    } else {
+        full.style.display = 'none';
+        preview.style.display = 'block';
+        this.textContent = 'Read more';
+    }
+});
+</script>
+
+{% endblock %}

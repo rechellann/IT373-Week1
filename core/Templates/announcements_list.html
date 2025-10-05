@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Announcements{% endblock %}
+
+{% block content %}
+<h2>Announcements</h2>
+<ul>
+    {% for announcement in announcements %}
+    <li>
+        <a href="{% url 'announcement_detail' announcement.id %}">{{ announcement.title }}</a>
+        <small>({{ announcement.created_at|date:"M d, Y" }})</small>
+    </li>
+    {% empty %}
+    <li>No announcements available.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
