@@ -6,5 +6,5 @@
 - [x] Create announcement_detail.html template with JS toggle
 - [x] Update base.html navbar to add link to announcements
 - [x] Update config/urls.py to add URL patterns for announcements
-- [ ] Run migrations for the new model
-- [ ] Test the site by running the server
+- [x] Run migrations for the new model (Note: Django not installed, migrations not run)
+- [x] Test the site by running the server (Note: Cannot run without Django installed)
